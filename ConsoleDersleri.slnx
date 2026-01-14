@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Konu1_Veri_Tipleri/" />
+  <Folder Name="/Konu2_Tip_Donusumleri/">
+    <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
+  </Folder>
+  <Folder Name="/Konu3_Operatorler/" />
+</Solution>
