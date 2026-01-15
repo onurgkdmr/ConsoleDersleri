@@ -3,5 +3,7 @@
   <Folder Name="/Konu2_Tip_Donusumleri/">
     <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
   </Folder>
-  <Folder Name="/Konu3_Operatorler/" />
+  <Folder Name="/Konu3_Operatorler/">
+    <Project Path="260115_4_Ornek_Operatorler/260115_4_Ornek_Operatorler.csproj" Id="86aca6f9-0b9f-49ab-abd2-5fc16f772236" />
+  </Folder>
 </Solution>
