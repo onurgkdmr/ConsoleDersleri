@@ -38,6 +38,7 @@
 			//------------------------True                      &&                                         True 
 			//-------------------------------------------------True
 			Console.WriteLine("\"Yaşar Kemal Van\" != \"Orhan Pamuk İstanbul\" && ((14.5 == Convert.ToDouble(\"14.5\") || false == true) && (double)45 == Convert.ToDouble(\"45\")) sonucu:" + sonuc);
+			//Sınıfta yapılan işlem=> Resül Hoca
 
 		}	
 	}
