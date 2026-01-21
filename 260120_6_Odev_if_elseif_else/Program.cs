@@ -46,7 +46,7 @@
 			{
 				Console.WriteLine("Hatalı giriş yaptınız.");
 			}
-				Console.WriteLine("--------------------------------------------");
+				
 			
 
 
