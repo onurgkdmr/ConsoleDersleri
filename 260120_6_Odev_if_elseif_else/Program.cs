@@ -46,9 +46,7 @@
 			{
 				Console.WriteLine("Hatalı giriş yaptınız.");
 			}
-				Console.WriteLine("--------------------------------------------");
 			
-
 
 			// SORU-2:
 			Console.WriteLine("Ay numarası giriniz:");
