@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Konu1_Veri_Tipleri/">
     <Project Path="260108_2_Tam_Sayi_Degiskenler/260108_2_Tam_Sayi_Degiskenler.csproj" Id="44e1b770-2652-4754-a8a9-6240450e1247" />
+    <Project Path="260108_3_Ondalik_Degiskenler/260108_3_Ondalik_Degiskenler.csproj" Id="983f2664-716e-4d14-9fc0-c6bb910cda4f" />
   </Folder>
   <Folder Name="/Konu2_Tip_Donusumleri/">
     <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
