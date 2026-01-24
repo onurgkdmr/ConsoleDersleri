@@ -12,7 +12,7 @@
             3) 1.sayıya 5 ekleyin, 2.sayıdan -10 çıkartın, 3.sayıyı da 5 ile çarparak işlemlerin sonucunu ekranda gösteriniz.
             NOT: Yeni bir değişken tanımlamadan 3.soruyu yapınız.
             4) 5 sayının toplam sonucu 9,11,13 e ayrı ayrı bölündüğünü True, False şeklinde hesaplayınız.
-            5) 1., 2., 3. sayıların toplamını, 4.sayıdan 5.sayı çıkartılınca kalan sonuca bölerek sonucu ekranda gösteriniz.
+            5) 1., 2., 3. sayıların toplamını, 4.sayıdan 5.sayı çıkartılınca kalan sonuca bölerek sonucu ekranda gösteriniz..
              */
 
 			Console.WriteLine("1. sayıyı giriniz:");
