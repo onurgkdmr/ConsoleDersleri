@@ -10,4 +10,5 @@
   <Folder Name="/Konu4_Karar_Yapilari/">
     <Project Path="260120_6_Odev_if_elseif_else/260120_6_Odev_if_elseif_else.csproj" Id="6e4e4be9-793a-4262-8e24-a71a576dad6a" />
   </Folder>
+  <Project Path="260108_1_Giris_Console/260108_1_Giris_Console.csproj" Id="0e10f2d3-7785-4b78-beb0-fad720b9a749" />
 </Solution>
