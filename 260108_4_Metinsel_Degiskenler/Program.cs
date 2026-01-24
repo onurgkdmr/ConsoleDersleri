@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            // CTRL+SPACE ile kodlar görünebilir.
+            // CTRL+SPACE ile tüm kodlar görünebilir.
 
             string metin1 = "Merhaba dünya";  // RAM ne kadar güçlü ise o kadar metin (string) ifade alır.
 
