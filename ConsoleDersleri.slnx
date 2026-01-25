@@ -5,6 +5,7 @@
     <Project Path="260108_4_Metinsel_Degiskenler/260108_4_Metinsel_Degiskenler.csproj" Id="e70462e2-61d8-423a-925b-b3bf663e3d80" />
     <Project Path="260109_1_Tarih_Veri_Tipi/260109_1_Tarih_Veri_Tipi.csproj" Id="f93f84c4-9029-48e7-9a59-fd5ac56596fa" />
     <Project Path="260109_2_Mantiksal_Veri_Tipi/260109_2_Mantiksal_Veri_Tipi.csproj" Id="4cc64011-8adf-4657-9b37-9703fb77607d" />
+    <Project Path="260109_3_Diger_Data_Tipleri/260109_3_Diger_Data_Tipleri.csproj" Id="3f8a2046-37e9-428f-88af-dd7b97fffa70" />
   </Folder>
   <Folder Name="/Konu2_Tip_Donusumleri/">
     <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
