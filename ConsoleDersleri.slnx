@@ -8,6 +8,7 @@
     <Project Path="260109_3_Diger_Data_Tipleri/260109_3_Diger_Data_Tipleri.csproj" Id="3f8a2046-37e9-428f-88af-dd7b97fffa70" />
   </Folder>
   <Folder Name="/Konu2_Tip_Donusumleri/">
+    <Project Path="260109_4_Convert_Tip_Donusumu/260109_4_Convert_Tip_Donusumu.csproj" Id="2db67ee8-7d55-434b-b744-82040b865d5b" />
     <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
   </Folder>
   <Folder Name="/Konu3_Operatorler/">
