@@ -21,6 +21,7 @@
   </Folder>
   <Folder Name="/Konu5_Donguler_Diziler/">
     <Project Path="260123_6_while_ornek2/260123_6_while_ornek2.csproj" Id="4a32148b-9789-4efc-b4fd-c6e544439388" />
+    <Project Path="260127_3_do_while_ornek1/260127_3_do_while_ornek1.csproj" Id="a55bfddf-78e9-41c1-bf1d-58c003151f62" />
   </Folder>
   <Project Path="260108_1_Giris_Console/260108_1_Giris_Console.csproj" Id="0e10f2d3-7785-4b78-beb0-fad720b9a749" />
 </Solution>
