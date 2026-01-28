@@ -9,6 +9,7 @@
   </Folder>
   <Folder Name="/Konu2_Tip_Donusumleri/">
     <Project Path="260109_4_Convert_Tip_Donusumu/260109_4_Convert_Tip_Donusumu.csproj" Id="2db67ee8-7d55-434b-b744-82040b865d5b" />
+    <Project Path="260113_1_Parse_Tip_Donusumu/260113_1_Parse_Tip_Donusumu.csproj" Id="e25081af-3d58-48a3-a5e6-860359d3add7" />
     <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
   </Folder>
   <Folder Name="/Konu3_Operatorler/">
