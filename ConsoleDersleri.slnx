@@ -11,6 +11,7 @@
     <Project Path="260109_4_Convert_Tip_Donusumu/260109_4_Convert_Tip_Donusumu.csproj" Id="2db67ee8-7d55-434b-b744-82040b865d5b" />
     <Project Path="260113_1_Parse_Tip_Donusumu/260113_1_Parse_Tip_Donusumu.csproj" Id="e25081af-3d58-48a3-a5e6-860359d3add7" />
     <Project Path="260113_2_Cast_Tip_Donusumu/260113_2_Cast_Tip_Donusumu.csproj" Id="f773ff9f-ca9f-45ca-bb6c-bea375bae47e" />
+    <Project Path="260113_3_Tostring_Tip_Donusumu/260113_3_Tostring_Tip_Donusumu.csproj" Id="d894e77c-cf03-4d0c-b11a-4d620eeac2e0" />
     <Project Path="260113_5_Odevler/260113_5_Odevler.csproj" />
   </Folder>
   <Folder Name="/Konu3_Operatorler/">
