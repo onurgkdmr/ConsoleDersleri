@@ -31,27 +31,50 @@
             int toplam = sayi1 + sayi2 + sayi3 + sayi4;
             Console.WriteLine("4 sayının toplamı:" + toplam);
 
+            // SORU-1 (DİĞER YÖNTEM):
+
+            // Console.WriteLine("4 sayının toplamı:" + (sayi1 + sayi2 + sayi3 + sayi4));
+
             // SORU-2:
 
             double sonuc1 = (sayi1 * sayi2) / (double)sayi4;
             Console.WriteLine("1. ve 2. sayıların çarpım sonucunun 4. sayıya bölümü:" + sonuc1);
 
-            // SORU-3:
+            // SORU-2 (DİĞER YÖNTEM):
 
-            double sonuc2 = (sayi1 + sayi2) / ((double)sayi3 - sayi4);
+            // Console.WriteLine("1. ve 2. sayıların çarpım sonucunun 4. sayıya bölümü:" + (sayi1 * sayi2) / (double)sayi4);
+
+			// SORU-3:
+
+			double sonuc2 = (sayi1 + sayi2) / ((double)sayi3 - sayi4);
             Console.WriteLine("1. ve 2. sayıların toplam sonucunun, 3. sayıdan 4. sayının çıkartılması sonucuna bölümü:" + sonuc2);
 
-            // SORU-4:
+            // SORU-3 (DİĞER YÖNTEM):
 
-            double sonuc3 = (sayi1 + sayi2 + sayi3) / (double)sayi4;
+            // int toplam12 = sayi1 + sayi2;
+            // int fark34 = sayi3 - sayi4;
+            // double cevap3 = toplam12 / (double)fark34;
+
+			// SORU-4:
+
+			double sonuc3 = (sayi1 + sayi2 + sayi3) / (double)sayi4;
             Console.WriteLine("1. , 2. ve 3. sayıların toplamının 4. sayıya bölümü:" + sonuc3);
 
-            // SORU-5:
+            // SORU-4 (DİĞER YÖNTEM):
 
-            double sonuc4 = (sayi1 * sayi2 * sayi3) / (double)sayi4;
+            // int toplam123 = sayi1 + sayi2 + sayi3;
+            // double cevap4 = toplam123 / (double)(sayi4);
+
+			// SORU-5:
+
+			double sonuc4 = (sayi1 * sayi2 * sayi3) / (double)sayi4;
             Console.WriteLine("1. , 2. ve 3. sayıların çarpım sonucunun 4. sayıya bölümü:" + sonuc4);
 
+            // SORU-5 (DİĞER YÖNTEM):
 
-        }
-    }
+            // int carpım123 = sayi1 * sayi2 * sayi3;
+            // double cevap5=carpım123/ (double)sayi4;
+
+		}
+	}
 }
