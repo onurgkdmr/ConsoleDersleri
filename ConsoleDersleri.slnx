@@ -17,6 +17,7 @@
   </Folder>
   <Folder Name="/Konu3_Operatorler/">
     <Project Path="260115_1_Aritmetik_Operatorler/260115_1_Aritmetik_Operatorler.csproj" Id="9f7957b2-d82c-43c7-a8eb-a0f0bf00cfe1" />
+    <Project Path="260115_2_Karsilastirma_Operatorleri/260115_2_Karsilastirma_Operatorleri.csproj" Id="180b8e52-bee3-49ae-a3bf-7afb5299d73c" />
     <Project Path="260115_4_Ornek_Operatorler/260115_4_Ornek_Operatorler.csproj" Id="86aca6f9-0b9f-49ab-abd2-5fc16f772236" />
     <Project Path="260116_2_Odevler/260116_2_Odevler.csproj" Id="76643cb5-a760-458a-90c8-b9d176b79341" />
   </Folder>
