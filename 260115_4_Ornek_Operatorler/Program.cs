@@ -2,8 +2,8 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
+		static void Main(string[] args)
+		{
 			bool sonuc;
 
 			sonuc = 14 >= 14;  //True
@@ -17,7 +17,7 @@
 			//-------True    && (            False                  )
 			//-------True    &&    False
 			//-------------False
-			Console.WriteLine("14 >= 14 && (45 == 45 && \"software\"==\"yazılım\") sonuç:" + sonuc);
+			Console.WriteLine($"14 >= 14 && (45 == 45 && {"software"=="yazılım"}) sonuç:" + sonuc);
 
 
 			// SORU-1:
