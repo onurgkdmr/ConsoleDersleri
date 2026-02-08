@@ -24,6 +24,7 @@
     <Project Path="260116_2_Odevler/260116_2_Odevler.csproj" Id="76643cb5-a760-458a-90c8-b9d176b79341" />
   </Folder>
   <Folder Name="/Konu4_Karar_Yapilari/">
+    <Project Path="260120_1_Tanim/260120_1_Tanim.csproj" Id="093cb879-8b42-4f91-848b-582190c8fd66" />
     <Project Path="260120_6_Odev_if_elseif_else/260120_6_Odev_if_elseif_else.csproj" Id="6e4e4be9-793a-4262-8e24-a71a576dad6a" />
   </Folder>
   <Folder Name="/Konu5_Donguler_Diziler/">
