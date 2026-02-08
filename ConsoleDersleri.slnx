@@ -20,6 +20,7 @@
     <Project Path="260115_2_Karsilastirma_Operatorleri/260115_2_Karsilastirma_Operatorleri.csproj" Id="180b8e52-bee3-49ae-a3bf-7afb5299d73c" />
     <Project Path="260115_3_Mantiksal_Operatorler/260115_3_Mantiksal_Operatorler.csproj" Id="0b6de48a-ae5f-40cc-aa9e-bdd63f41cd9b" />
     <Project Path="260115_4_Ornek_Operatorler/260115_4_Ornek_Operatorler.csproj" Id="86aca6f9-0b9f-49ab-abd2-5fc16f772236" />
+    <Project Path="260116_1_Atama_Operatorleri/260116_1_Atama_Operatorleri.csproj" Id="0df76327-3f49-45d7-bd18-994909ee7340" />
     <Project Path="260116_2_Odevler/260116_2_Odevler.csproj" Id="76643cb5-a760-458a-90c8-b9d176b79341" />
   </Folder>
   <Folder Name="/Konu4_Karar_Yapilari/">
