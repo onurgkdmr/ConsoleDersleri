@@ -30,7 +30,10 @@
 			Console.WriteLine("5. sayıyı giriniz:");
 			int sayi5 = Convert.ToInt32(Console.ReadLine());
 
+			double sonuc4 = ((double)(sayi1 + sayi2 + sayi3))/(sayi4-sayi5);
 
+			int toplam2= sayi1 + sayi2 + sayi3 + sayi4 + sayi5;
+			
 			// SORU-1:
 			bool s1=sayi1% 2 == 0;
 			bool s2 = sayi2 % 2 == 0;
@@ -61,7 +64,6 @@
 
 
 			// SORU-4;
-			int toplam2= sayi1 + sayi2 + sayi3 + sayi4 + sayi5;
 
 			bool sonuc1 = toplam2 % 9 == 0;
 			Console.WriteLine("toplam2 değeri 9'un katı mıdır?, Kalan:" + toplam2 % 9+ "=>" +sonuc1);
@@ -74,7 +76,6 @@
 
 
 			// SORU-5:
-			double sonuc4 = ((double)(sayi1 + sayi2 + sayi3))/(sayi4-sayi5);
 			Console.WriteLine("1.,2. ve 3. sayıların toplamının 4. sayıdan 5. sayının çıkartılmış haline bölünmesi sonucu:" + sonuc4);
 
 
