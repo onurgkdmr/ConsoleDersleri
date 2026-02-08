@@ -27,6 +27,7 @@
     <Project Path="260120_1_Tanim/260120_1_Tanim.csproj" Id="093cb879-8b42-4f91-848b-582190c8fd66" />
     <Project Path="260120_2_if_else_ornek/260120_2_if_else_ornek.csproj" Id="634868d4-cf74-48a3-84dd-8759686547ec" />
     <Project Path="260120_3_if_else_Login/260120_3_if_else_Login.csproj" Id="380009b7-528d-4db8-b918-b706791be0bd" />
+    <Project Path="260120_4_if_else_maas_cinsiyet/260120_4_if_else_maas_cinsiyet.csproj" Id="a83d7ec7-57b7-4724-87fb-035bd0cae77d" />
     <Project Path="260120_6_Odev_if_elseif_else/260120_6_Odev_if_elseif_else.csproj" Id="6e4e4be9-793a-4262-8e24-a71a576dad6a" />
   </Folder>
   <Folder Name="/Konu5_Donguler_Diziler/">
