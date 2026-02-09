@@ -39,6 +39,7 @@
     <Project Path="260123_3_ternary_operatoru/260123_3_ternary_operatoru.csproj" Id="ab403cfc-94b9-4162-aee8-53584b0a0a28" />
   </Folder>
   <Folder Name="/Konu5_Donguler_Diziler/">
+    <Project Path="260123_4_while/260123_4_while.csproj" Id="aa447412-1ac2-46ef-91c1-97d6e48f5c45" />
     <Project Path="260123_6_while_ornek2/260123_6_while_ornek2.csproj" Id="4a32148b-9789-4efc-b4fd-c6e544439388" />
     <Project Path="260127_3_do_while_ornek1/260127_3_do_while_ornek1.csproj" Id="a55bfddf-78e9-41c1-bf1d-58c003151f62" />
     <Project Path="260130_7_Diziler_Odev/260130_7_Diziler_Odev.csproj" Id="959dc767-b624-4cd1-87cd-e8f6cc46d4fe" />
