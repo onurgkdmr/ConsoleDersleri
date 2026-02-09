@@ -31,6 +31,7 @@
     <Project Path="260120_5_if_elseif_else_tanim/260120_5_if_elseif_else_tanim.csproj" Id="dd6d7ace-42f6-4ba8-9fb4-73573330c26a" />
     <Project Path="260120_6_Odev_if_elseif_else/260120_6_Odev_if_elseif_else.csproj" Id="6e4e4be9-793a-4262-8e24-a71a576dad6a" />
     <Project Path="260121_1_if_elseif_else_fatura/260121_1_if_elseif_else_fatura.csproj" Id="52ab700c-cd0a-4cec-8d3d-312ea84d6a8f" />
+    <Project Path="260121_2_siralama/260121_2_siralama.csproj" Id="4dd83a98-ca77-4b1c-92f3-fda37eda4696" />
   </Folder>
   <Folder Name="/Konu5_Donguler_Diziler/">
     <Project Path="260123_6_while_ornek2/260123_6_while_ornek2.csproj" Id="4a32148b-9789-4efc-b4fd-c6e544439388" />
