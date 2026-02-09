@@ -35,6 +35,7 @@
     <Project Path="260121_3_emekli_if_elseif_else/260121_3_emekli_if_elseif_else.csproj" Id="29e6a924-11fc-4304-a350-0af2e4bee1ef" />
     <Project Path="260121_4_maas_zam/260121_4_maas_zam.csproj" Id="5130fa42-47e0-42f4-a4d5-0387370a5daf" />
     <Project Path="260123_1_switch_case/260123_1_switch_case.csproj" Id="7d053109-ee6c-4171-bdb7-10eba65dc064" />
+    <Project Path="260123_2_switch_case_ornek1/260123_2_switch_case_ornek1.csproj" Id="937ca2c3-c538-4980-ab45-e01395fd8bd4" />
   </Folder>
   <Folder Name="/Konu5_Donguler_Diziler/">
     <Project Path="260123_6_while_ornek2/260123_6_while_ornek2.csproj" Id="4a32148b-9789-4efc-b4fd-c6e544439388" />
