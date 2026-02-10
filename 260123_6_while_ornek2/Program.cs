@@ -5,56 +5,50 @@
         static void Main(string[] args)
         {
             /*
-            1) 1-100 arasındaki sayıları ekrana yazın ve toplamlarını hesaplayınız.
-            2) 55-255 arasındaki 5 in katları olan sayıları ekrana yazdırın ve toplamlarını hesaplayınız.
+            1) 1-100 (1 ve 100 dahil) arasındaki sayıları ekrana yazın ve toplamlarını hesaplayınız.
+            2) 55-255 (55 ve 255 dahil) arasındaki 5 in katları olan sayıları ekrana yazdırın ve toplamlarını hesaplayınız.
             3) 500 den 0 a doğru 13 ün katları olan sayıları ekranda yazınız (tersten sayım olacak.).
-            4) 1-100 arasındaki asal sayıların toplamını hesaplayınız (zor soru).
+            4) 1-10000 arasındaki asal sayıların toplamını hesaplayınız (zor soru).
             */
 
             // SORU-1:
 
-            int sayi = 2;
-            while (sayi<100)
+            int sayi = 1;
+			int toplam = 0;
+            
+            while (sayi<=100)
             {
                 Console.WriteLine(sayi);
                 sayi++;
+                toplam += sayi;
             }
-			int toplam = 0;
-            int sayi1 = 2;
-			while (sayi1 < 100)
-            {
-                toplam += sayi1;
-                sayi1++;
-            }
+            
             Console.WriteLine("1-100 arasındaki sayıların toplamı:" + toplam);
+
+            Console.WriteLine("--------------------------------------------");
 
             // SORU-2:
 
-            int sayi3 = 56;
-            while (sayi3 < 255)
+            int sayi1 = 55;
+            int toplam1 = 0;
+
+            while (sayi1 <= 255)
             {
-                if (sayi3%5==0)
+                if (sayi1%5==0)
                 {
-                    Console.WriteLine(sayi3);
+                    Console.WriteLine(sayi1);
+                    toplam1 += sayi1;
                 }
-				sayi3++;
+				sayi1++;
 			}
 
-            int sayi4 = 56;
-            int toplam1 = 0;
-            while (sayi4<255)
-            {   
-                if (sayi4%5==0)
-                {
-					toplam1 += sayi4;
-				}
-				sayi4++;
-			}
             Console.WriteLine("5-255 arasındaki 5'in katı olan sayıların toplamı:"+toplam1);
 
-            // SORU-3:
+			Console.WriteLine("--------------------------------------------");
 
-            int sayi5 = 499;
+			// SORU-3:
+
+			int sayi5 = 500;
             while (sayi5 > 0)
             {
                 if (sayi5%13==0)
@@ -66,24 +60,9 @@
 
             // SORU-4:
 
-            int sayi6 = 2;
-            int sayi7 = 2;
             
-            while (sayi6 < 100)
-            {
-				while (sayi7 < sayi6)
-                {
-                    if (sayi6 % sayi7 == 0)
-					{
-						Console.WriteLine("Asal değildir");
-					}
-                    else
-                    {
-                        Console.WriteLine(sayi6);
-                    }
-                    sayi7++;
-				}
-			}
+		
+			
 		}
 	}
 }
