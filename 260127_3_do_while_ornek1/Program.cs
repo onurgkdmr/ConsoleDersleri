@@ -10,7 +10,7 @@
 			// 3) Kullanıcıdan 1-100 arasında sayı girmesini isteyiniz. Girilen sayı 1-100 arasında değil ise tekrar sayı girmesini isteyiniz.
 			// Girilen sayı 1-100 arasında ise sayıyı ekranda gösteriniz ve 1-100 arasında 11 sayı girildikten sonra işlemi sonlandırıp girilen 
 			// sayıların toplamını ekranda gösteriniz.
-			// 4) Kullanıcı adı admin, şifresi 12?ab olan bir sistem için 3 defa giriş hakkı tanıyan do while sistemini kodlayınız
+			// 4) Kullanıcı adı admin, şifresi 12?ab olan bir sistem için 3 defa giriş hakkı tanıyan do while sistemini kodlayınız.
 
 
 			// SORU-1:
