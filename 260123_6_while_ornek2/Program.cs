@@ -60,7 +60,45 @@
 
             // SORU-4:
 
-            
+            int sayi2 = 2;
+
+            // Bir sayı sadece kendisine ve 1'e bölünüyorsa asal sayıdır.
+
+            int toplamAsalSayilar = 0;
+
+            while (sayi2<10000)
+            {
+                // 1,2,3,4,.....,9999
+                // 1 asal değildir. Çünkü asal sayıların iki adet çarpanı olur. 1'in tek çarpanı kendisidir.
+                // 2 asal sayıdır.
+                // 3 => 2'ye bölünmez. Asal sayıdır.
+                // 4 => 3,2 (2'ye bölüneceği için asal sayı değildir.)
+                // 5 => 2,3,4. Asal sayıdır.
+                // sayi2 => 2,3,4,5,6,7,8,9,10
+                int bolenSayi = 2;
+                bool asalMi = true;
+
+                while (sayi2>bolenSayi)
+                {
+           
+                    if (sayi2%bolenSayi==0) // Eğer sayi2 bolenSayi'ya tam bölünüyorsa bu sayi2'nin asal olmadığını ispatlar.  
+                    {
+                        asalMi = false;
+                        break; // İçinde bulunduğu döngüyü sonlandırır. sayi2 > bolenSayi koşullu döngüyü sonlandırır. Diğer döngüye devam eder.
+                    }
+                    bolenSayi++;
+                }
+
+                if (asalMi)
+                {
+                    toplamAsalSayilar = toplamAsalSayilar + sayi2;
+                    Console.Write(sayi2 + ",");
+                }
+                sayi2++;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Toplam Asal Sayılar:" + toplamAsalSayilar);
 		
 			
 		}
