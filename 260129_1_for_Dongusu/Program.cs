@@ -21,7 +21,7 @@
             // for (1.Adım, 2.Adım, 3.Adım)
             for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine(i+",");
+                Console.Write(i+",");
             }
 
             Console.WriteLine("");
@@ -29,7 +29,7 @@
 
             for (int i=25; i>10; i--)
             {
-                Console.WriteLine(i + ",");
+                Console.Write(i + ",");
             }
         }
     }
