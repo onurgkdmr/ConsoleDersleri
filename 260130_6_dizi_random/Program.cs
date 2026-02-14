@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            // Random => Rastgele sayı üretmek için kullanılan bir class yapısıdır
+            // Random => Rastgele sayı üretmek için kullanılan bir class yapısıdır.
             
             Random rastgele = new Random();
             Console.WriteLine(rastgele.Next(200));
