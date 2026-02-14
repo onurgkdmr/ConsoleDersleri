@@ -53,6 +53,11 @@
     <Project Path="260129_6_for_dik_ucgen_ters_say/260129_6_for_dik_ucgen_ters_say.csproj" Id="97ceec8f-8eda-433c-b523-b4584c419b06" />
     <Project Path="260129_7_ters_dik_ucgen_for/260129_7_ters_dik_ucgen_for.csproj" Id="4b1002a3-adfc-421a-b05f-7d56648a0527" />
     <Project Path="260130_1_Diziler/260130_1_Diziler.csproj" Id="556e40e2-21a1-46d6-9ecd-466433ef212d" />
+    <Project Path="260130_2_dizi_ornek1/260130_2_dizi_ornek1.csproj" Id="9726277a-e6c2-4745-982c-317a96d415d3" />
+    <Project Path="260130_3_dizi_while/260130_3_dizi_while.csproj" Id="412ee43a-d92e-4572-abbf-4f4d712df5f5" />
+    <Project Path="260130_4_dizi_ornek3/260130_4_dizi_ornek3.csproj" Id="6cf132f2-0703-4210-a528-0615baff710d" />
+    <Project Path="260130_5_dizi_ornek/260130_5_dizi_ornek.csproj" Id="8b2e1e51-c3df-4fed-a647-bf19b26d535c" />
+    <Project Path="260130_6_dizi_random/260130_6_dizi_random.csproj" Id="e0dac0d7-82c4-4fcc-9fb6-45d3b7a5e5f0" />
     <Project Path="260130_7_Diziler_Odev/260130_7_Diziler_Odev.csproj" Id="959dc767-b624-4cd1-87cd-e8f6cc46d4fe" />
   </Folder>
   <Folder Name="/Konu6_Collection_foreach/" />
