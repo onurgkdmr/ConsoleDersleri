@@ -64,6 +64,7 @@
     <Project Path="260203_1_Collection/260203_1_Collection.csproj" Id="e52d886f-bce2-451b-aaed-ce5e29a22793" />
     <Project Path="260205_1_foreach_tanim/260205_1_foreach_tanim.csproj" Id="e6f15bc9-31ed-4b07-9c34-aa686e934d51" />
     <Project Path="260205_2_collection/260205_2_collection.csproj" Id="d8a426ef-d9b5-4051-b2f9-4a085ab76c71" />
+    <Project Path="260205_3_collection_ornek1/260205_3_collection_ornek1.csproj" Id="111139d8-2a92-41bc-97ac-11184e46ce13" />
   </Folder>
   <Folder Name="/Konu7_Method_function/">
     <Project Path="260212_2_Emekli_method_ornek/260212_2_Emekli_method_ornek.csproj" Id="5db814ad-83d7-4616-a7da-b957257feda5" />
