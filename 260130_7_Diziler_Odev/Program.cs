@@ -22,9 +22,12 @@ namespace _260130_7_Diziler_Odev
 
 			Random rastgele = new Random();
 
-			int[] sayilar = new int[200];
-
-			int elemanSayisiCift = sayilar.Length;
+			int[] sayilarCift = new int[200];
+			int[] sayilarTek = new int[200];
+			
+			int elemanSayisiCift = sayilarCift.Length;
+			int indexCift = 0;
+			int indexTek = 0;
 
 			for (int i = 0; i < elemanSayisiCift; i++)
 			{
@@ -33,49 +36,77 @@ namespace _260130_7_Diziler_Odev
 				if (sayi % 2 == 0)
 				{
 					Console.WriteLine(sayi+ "=>" + "ÇİFT SAYI");
+					sayilarCift[indexCift] = sayi;
+					indexCift++;
+				}
+				else
+				{
+					Console.WriteLine(sayi + " => TEK SAYI");
+					sayilarTek[indexTek] = sayi;
+					indexTek++;
 				}
 			}
 
 			Console.WriteLine("---------------------------");
 
-			int elemanSayisiTek = sayilar.Length;
-			
-			for (int i=0; i<elemanSayisiTek; i++)
+			Console.WriteLine("Çift Sayılar:");
+	
+			for (int i = 0; i < indexCift; i++)
 			{
-				int sayi= rastgele.Next();
-				
-				if (sayi % 2 != 0)
-				{
-					Console.WriteLine(sayi + "=>" + "TEK SAYI");
-				}
+				Console.WriteLine(sayilarCift[i]);
+			}
+			
+			Console.WriteLine();
+			
+			Console.WriteLine("Tek Sayılar:");
+			
+
+			for (int i = 0; i < indexTek; i++)
+			{
+				Console.WriteLine(sayilarTek[i]);
 			}
 
-			Console.WriteLine("------------------------");
+
+			Console.WriteLine("---------------------------");
+
 
 
 			// SORU-2:
 
-			int[] sayilar2 = new int[5];
-			int elemanSayisi = sayilar2.Length;
+			int elemanSayisi = 5;
+			int[] dizi = new int[elemanSayisi];
+			//int[] dizi = { 11, 3, 9, 5, 2 };
 
-
-			for (int i = 0; i < elemanSayisi; i++)
+			for (int i = 0; i < dizi.Length; i++)
 			{
 				Console.WriteLine(i + 1 + ". sayıyı giriniz:");
-				sayilar2[i] = Convert.ToInt32(Console.ReadLine());
-
+				dizi[i] = Convert.ToInt32(Console.ReadLine());
 			}
-
-
-			for (int i=0; i < elemanSayisi-1; i++)
+			//Dizi=>11,3,9,5,2
+			for (int i = 0; i < dizi.Count(); i++)
 			{
-				for (int j=i+1;  j<elemanSayisi; j++)
+				//dizi[i]=>11
+
+				for (int k = 0; k < dizi.Count(); k++)
 				{
-					Console.WriteLine(j);
+					int gecici;
+					if (dizi[k] > dizi[i])
+					{
+						gecici = dizi[k];
+						dizi[k] = dizi[i];
+						dizi[i] = gecici;
+					}
+
 				}
 			}
 
 
+			for (int i = 0; i < dizi.Length; i++)
+			{
+				Console.Write(dizi[i] + "-");
+			}
+
+			Console.WriteLine();
 
 			// SORU-3:
 
@@ -93,7 +124,7 @@ namespace _260130_7_Diziler_Odev
 
 			for (int i=0; i<calisanSayisi; i++)
 			{
-				Console.WriteLine(i + 1 + ". kişinin maaşını giriniz:");
+				Console.WriteLine(isim[i] + " adlı kişinin maaşını giriniz:");
 				maas[i]=Convert.ToDouble(Console.ReadLine());
 			}
 
