@@ -60,7 +60,9 @@
     <Project Path="260130_6_dizi_random/260130_6_dizi_random.csproj" Id="e0dac0d7-82c4-4fcc-9fb6-45d3b7a5e5f0" />
     <Project Path="260130_7_Diziler_Odev/260130_7_Diziler_Odev.csproj" Id="959dc767-b624-4cd1-87cd-e8f6cc46d4fe" />
   </Folder>
-  <Folder Name="/Konu6_Collection_foreach/" />
+  <Folder Name="/Konu6_Collection_foreach/">
+    <Project Path="260205_1_foreach_tanim/260205_1_foreach_tanim.csproj" Id="e6f15bc9-31ed-4b07-9c34-aa686e934d51" />
+  </Folder>
   <Folder Name="/Konu7_Method_function/">
     <Project Path="260212_2_Emekli_method_ornek/260212_2_Emekli_method_ornek.csproj" Id="5db814ad-83d7-4616-a7da-b957257feda5" />
   </Folder>
