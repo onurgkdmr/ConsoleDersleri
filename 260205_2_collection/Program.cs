@@ -14,7 +14,7 @@ namespace _260205_2_collection
 			List<int> sayilar = new List<int>();//Fabrika çalışan sırasını
 			sayilar.Add(10);
 
-			Collection<double> maaslar = new Collection<double>();//Maaşları  listelemek için kullanılabilir
+			Collection<double> maaslar = new Collection<double>();//Maaşları  listelemek için kullanılabilir.
 			maaslar.Add(65125);
 			maaslar.Add(35125);
 			maaslar.Add(65100);
