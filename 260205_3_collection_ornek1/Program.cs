@@ -58,7 +58,7 @@ namespace _260205_3_collection_ornek1
 			    }
 			}
 			
-			//bu soru eğer 5 den fazla kişi kartı istenseydi nasıl bir yol izlenirdi, çözünüz?
+			//bu soru eğer 5 den fazla kişi kartı istenseydi nasıl bir yol izlenirdi, çözünüz? (Konu7' de cevabı var)
 
 		}
 	}
