@@ -10,427 +10,305 @@ namespace _260213_3_Bankamatik_Proje
 		static string sifre = "ab18";
 		static void Main(string[] args)
 		{
+			EkranaYaz("ATM UYGULAMASI:");
+			EkranaYaz("Başlangıç bakiyesi: 250 TL");
+			Cizgi();
+			EkranaYaz("1-Kartlı İşlem\n2-Kartsız İşlem");
+			Cizgi();
+			BaslangicMenu();
+			Bosluk();
+			KartliIslem();
+			AnaMenu();
+		}
 
-
-			Console.WriteLine("ATM UYGULAMASI:");
-
-			Console.WriteLine("Başlangıç bakiyesi: 250 TL");
-
-			Console.WriteLine("------------------------------------");
-
-			Console.WriteLine("1-Kartlı İşlem\n2-Kartsız İşlem");
-
-			Console.WriteLine("------------------------------------");
-
-
-
+		/// <summary>
+		/// Bu metot kartlı veya kartsız işlem için seçim yaptırır.
+		/// </summary>
+		static void BaslangicMenu()
+		{
 			string secim;
-
 			do
 			{
 
-				Console.WriteLine("Kartlı işlem için 1'i, kartsız işlem için 2'yi tuşlayınız:");
-				secim = Console.ReadLine();
+				EkranaYaz("Kartlı işlem için 1'i, kartsız işlem için 2'yi tuşlayınız:");
+				secim = Oku();
 
 				if (secim == "1")
 				{
-					Console.WriteLine("------------------------------------");
-					Console.WriteLine("KARTLI İŞLEM");
+					Cizgi();
+					EkranaYaz("KARTLI İŞLEM");
 				}
 				else if (secim == "2")
 				{
-					Console.WriteLine("KARTSIZ İŞLEM");
-					Console.WriteLine("Kartsız herhangi bir işlem yapılamamaktadır.");
+					EkranaYaz("KARTSIZ İŞLEM");
+					EkranaYaz("Kartsız herhangi bir işlem yapılamamaktadır.");
 					return;
+					
 				}
 				else
 				{
-					Console.WriteLine("Hatalı seçim yaptınız, tekrar deneyiniz.");
+					EkranaYaz("Hatalı seçim yaptınız, tekrar deneyiniz.");
 				}
 
 			} while (secim != "1" && secim != "2");
+			
+		}
 
-			Console.WriteLine();
-
-
+		/// <summary>
+		/// Bu metot kartlı işlem için şifre ile giriş kontrolü yapar.
+		/// </summary>
+		static void KartliIslem()
+		{
 			int girisHakki = 2;
 
 			while (girisHakki >= 0)
 			{
 				Console.Write("Şifrenizi giriniz:");
-				string sifre = Console.ReadLine();
+				sifre = Oku();
 
 				if (sifre == "ab18")
 				{
-					Console.WriteLine("Giriş başarılı. Ana menüye yönlendiriliyorsunuz.");
-					Console.WriteLine("------------------------------------");
-					Console.WriteLine("ANA MENÜ");
-					Console.WriteLine();
+					EkranaYaz("Giriş başarılı. Ana menüye yönlendiriliyorsunuz.");
+					Cizgi();
+					EkranaYaz("ANA MENÜ");
+					Bosluk();
 					break;
 				}
 				else
 				{
-					Console.WriteLine("Hatalı giriş yaptınız, tekrar deneyiniz. Kalan hak sayısı:" + girisHakki);
+					EkranaYaz("Hatalı giriş yaptınız, tekrar deneyiniz. Kalan hak sayısı:" + girisHakki);
 					girisHakki--;
 
 					if (girisHakki == -1)
 					{
-						Console.WriteLine("Şifre 3 kez yanlış girildi. Sistemden çıkılıyor.");
+						EkranaYaz("Şifre 3 kez yanlış girildi. Sistemden çıkılıyor.");
 					}
 				}
 			}
+		}
 
+		/// <summary>
+		/// Bu metot ana menüde seçilen işlemleri yaptırır.
+		/// </summary>
+		static void AnaMenu()
+		{
 			while (true)
 			{
-				Console.WriteLine("1 - Para Çekme");
-				Console.WriteLine("2 - Para Yatırma");
-				Console.WriteLine("3 - Para Transferleri");
-				Console.WriteLine("4 - Eğitim Ödemeleri");
-				Console.WriteLine("5 - Ödemeler");
-				Console.WriteLine("6 - Bilgi Güncelleme");
-				Console.WriteLine("0 - Çıkış");
-				Console.WriteLine("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
+				EkranaYaz("1 - Para Çekme");
+				EkranaYaz("2 - Para Yatırma");
+				EkranaYaz("3 - Para Transferleri");
+				EkranaYaz("4 - Eğitim Ödemeleri");
+				EkranaYaz("5 - Ödemeler");
+				EkranaYaz("6 - Bilgi Güncelleme");
+				EkranaYaz("0 - Çıkış");
+				EkranaYaz("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
 
 
-				string secim1 = Console.ReadLine();
-				switch (secim1)
+				string secim = Oku();
+				switch (secim)
 				{
 					case "1":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("1 - PARA ÇEKME");
-						Console.WriteLine();
+						Cizgi();
+						EkranaYaz("1 - PARA ÇEKME");
+						Bosluk();
 
 						ParaCekme();
 						break;
 
 					case "2":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("2 - PARA YATIRMA");
-						Console.WriteLine();
+						Cizgi();
+						EkranaYaz("2 - PARA YATIRMA");
+						Bosluk();
 
 						ParaYatirma();
 						break;
-					
+
 
 					case "3":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("3 - PARA TRANSFERLERİ");
-						Console.WriteLine();
+						Cizgi();
+						EkranaYaz("3 - PARA TRANSFERLERİ");
+						Bosluk();
 
 						ParaTransfer();
 						break;
-						
+
 
 					case "4":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("4 - EĞİTİM ÖDEMELERİ");
-						Console.WriteLine();
+						Cizgi();
+						EkranaYaz("4 - EĞİTİM ÖDEMELERİ");
+						Bosluk();
 
-						Console.WriteLine("Bu sayfa arızalıdır.");
-						Console.WriteLine();
+						EkranaYaz("Bu sayfa arızalıdır.");
+						Bosluk();
 
 						AltMenu();
 						break;
 
 					case "5":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("5 - ÖDEMELER");
-						Console.WriteLine();
+						Cizgi();
+						EkranaYaz("5 - ÖDEMELER");
+						Bosluk();
 
 						Odemeler();
 						break;
 
 					case "6":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("6 - BİLGİ GÜNCELLEME");
-						Console.WriteLine();
-						
+						Cizgi();
+						EkranaYaz("6 - BİLGİ GÜNCELLEME");
+						Bosluk();
+
 						BilgiGuncelle();
 						break;
 
 					case "0":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("Çıkış yapılıyor...");
+						Cizgi();
+						EkranaYaz("Çıkış yapılıyor...");
 						return;
 
 					default:
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("Hatalı seçim yaptınız.");
+						Cizgi();
+						EkranaYaz("Hatalı seçim yaptınız.");
 						break;
 				}
-			}
-		}
-
-
-
-		static void Odemeler()
-		{
-
-			double bakiye = 250;
-
-			while (true)
-			{
-				Console.WriteLine("1 - Elektrik Faturası");
-				Console.WriteLine("2 - Telefon Faturası");
-				Console.WriteLine("3 - İnternet Faturası");
-				Console.WriteLine("4 - Su Faturası");
-				Console.WriteLine("5 - OGS Ödemeleri");
-
-				Console.WriteLine("9 - ANA MENÜ");
-				Console.WriteLine("0 - ÇIKIŞ");
-				Console.WriteLine("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
-
-				
-				string secim10 = Console.ReadLine();
-				switch (secim10)
-				{
-					case "1":
-						Console.WriteLine("Elektrik faturası tutarını giriniz:");
-						double elektrikFaturasi = Convert.ToDouble(Console.ReadLine());
-
-						if (bakiye >= elektrikFaturasi)
-						{
-							bakiye = bakiye - elektrikFaturasi;
-							Console.WriteLine("Elektrik faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
-							AltMenu();
-							break;
-						}
-						else
-						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							AltMenu();
-							break;
-						}
-				
-					case "2":
-
-						Console.WriteLine("Telefon faturası tutarını giriniz:");
-						double telefonFaturasi = Convert.ToDouble(Console.ReadLine());
-
-						if (bakiye >= telefonFaturasi)
-						{
-							bakiye = bakiye - telefonFaturasi;
-							Console.WriteLine("Telefon faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
-							AltMenu();
-							break;
-						}
-						else
-						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							AltMenu();
-							break;
-						}
-
-					case "3":
-
-						Console.WriteLine("İnternet faturası tutarını giriniz:");
-						double internetFaturasi = Convert.ToDouble(Console.ReadLine());
-
-						if (bakiye >= internetFaturasi)
-						{
-							bakiye = bakiye - internetFaturasi;
-							Console.WriteLine("İnternet faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
-							AltMenu();
-							break;
-						}
-						else
-						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							AltMenu();
-							break;
-						}
-
-					case "4":
-
-						Console.WriteLine("Su faturası tutarını giriniz:");
-						double suFaturasi = Convert.ToDouble(Console.ReadLine());
-
-						if (bakiye >= suFaturasi)
-						{
-							bakiye = bakiye - suFaturasi;
-							Console.WriteLine("Su faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
-							AltMenu();
-							break;
-						}
-						else
-						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							AltMenu();
-							break;
-						}
-
-					case "5":
-
-						Console.WriteLine("OGS için ödeme tutarını giriniz:");
-						double ogsOdeme = Convert.ToDouble(Console.ReadLine());
-
-						if (bakiye >= ogsOdeme)
-						{
-							bakiye = bakiye - ogsOdeme;
-							Console.WriteLine("OGS için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
-							AltMenu();
-							break;
-						}
-						else
-						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							AltMenu();
-							break;
-						}
-
-					case "9":
-						Console.WriteLine("------------------------------------");
-						Console.WriteLine("ANA MENÜ");
-						break;
-
-					case "0":
-						Console.WriteLine("Çıkış yapılıyor.");
-						Environment.Exit(0);
-						break;
-
-					default:
-						Console.WriteLine("Hatalı seçim yaptınız.");
-						break;
-				}
-				break;
 			}
 		}
 
 		/// <summary>
-		/// Bu metot, para çekme ile ilgili işlemleri gerçekleştirir.
+		/// Bu metot para çekme ile ilgili işlemleri gerçekleştirir.
 		/// </summary>
 		static void ParaCekme()
 		{
 			Console.Write("Çekilecek para tutarını giriniz:");
-			double cekilecekParaTutari = Convert.ToDouble(Console.ReadLine());
+			double cekilecekParaTutari = DoubleYap();
 
 
 			if (cekilecekParaTutari <= bakiye)
 			{
 				bakiye = bakiye - cekilecekParaTutari;
-				Console.WriteLine("Güncel bakiyeniz:" + bakiye);
+				EkranaYaz("Güncel bakiyeniz:" + bakiye);
 
 			}
 			else
 			{
-				Console.WriteLine("Yetersiz bakiye! Para çekme işlemi gerçekleştirilememektedir.");
+				EkranaYaz("Yetersiz bakiye! Para çekme işlemi gerçekleştirilememektedir.");
 
 			}
-			Console.WriteLine();
+			Bosluk();
 			AltMenu();
 		}
 
 		/// <summary>
-		/// Bu metot, para yatırma ile ilgili işlemleri gerçekleştirir.
+		/// Bu metot para yatırma ile ilgili işlemleri gerçekleştirir.
 		/// </summary>
 		static void ParaYatirma()
 		{
 			while (true)
 			{
-				Console.WriteLine("1 - Kredi Kartına");
-				Console.WriteLine("2 - Kendi Hesabına");
-				Console.WriteLine("9 - ANA MENÜ");
-				Console.WriteLine("0 - ÇIKIŞ");
-				Console.WriteLine("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
+				EkranaYaz("1 - Kredi Kartına");
+				EkranaYaz("2 - Kendi Hesabına");
+				EkranaYaz("9 - ANA MENÜ");
+				EkranaYaz("0 - ÇIKIŞ");
+				EkranaYaz("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
 
-				string secim3 = Console.ReadLine();
-				if (secim3 == "1")
+				string secim = Oku();
+				if (secim == "1")
 				{
-					Console.WriteLine("---- 1 - Kredi Kartına----");
+					EkranaYaz("---- 1 - Kredi Kartına----");
 					Console.Write("Kart numarasını giriniz (En az 12 haneli olacak şekilde): ");
-					string kartNo = Console.ReadLine();
+					string kartNo = Oku();
 
 					if (kartNo.Length >= 12)
 					{
 						Console.Write("Yatırılacak para tutarını giriniz:");
-						double yatirilacakParaTutari = Convert.ToDouble(Console.ReadLine());
+						double yatirilacakParaTutari = DoubleYap();
 
 						if (bakiye >= yatirilacakParaTutari)
 						{
 							bakiye = bakiye - yatirilacakParaTutari;
-							Console.WriteLine("Para kredi kartına yatırıldı. Güncel bakiyeniz:" + bakiye);
-							Console.WriteLine();
+							EkranaYaz("Para kredi kartına yatırıldı. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
 							AltMenu();
 							break;
 						}
 						else
 						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							Console.WriteLine();
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
 							AltMenu();
 							break;
 						}
 					}
 					else
 					{
-						Console.WriteLine("Geçersiz kart numarası.");
-						Console.WriteLine();
+						EkranaYaz("Geçersiz kart numarası.");
+						Bosluk();
 						AltMenu();
 						break;
 					}
 
 				}
-				else if (secim3 == "2")
+				else if (secim == "2")
 				{
-					Console.WriteLine("---- 2 - Kendi Hesabına ----");
+					EkranaYaz("---- 2 - Kendi Hesabına ----");
 					Console.Write("Yatırılacak para tutarını giriniz:");
-					double yatirilacakParaTutari1 = Convert.ToDouble(Console.ReadLine());
+					double yatirilacakParaTutari1 = DoubleYap();
 					bakiye = bakiye + yatirilacakParaTutari1;
-					Console.WriteLine("Para kendi hesabınıza yatırıldı. Güncel bakiyeniz:" + bakiye);
+					EkranaYaz("Para kendi hesabınıza yatırıldı. Güncel bakiyeniz:" + bakiye);
+					Bosluk();
 					AltMenu();
 					break;
 				}
-				else if (secim3 == "9")
+				else if (secim == "9")
 				{
-					Console.WriteLine("------------------------------------");
-					Console.WriteLine("ANA MENÜ");
+					Cizgi();
+					EkranaYaz("ANA MENÜ");
 					break;
 				}
-				else if (secim3 == "0")
+				else if (secim == "0")
 				{
-					Console.WriteLine("Çıkış yapılıyor...");
+					EkranaYaz("Çıkış yapılıyor...");
 					Environment.Exit(0);
 				}
 			}
 		}
 
 		/// <summary>
-		/// Bu metot, para transferi ile ilgili işlemleri gerçekleştirir.
+		/// Bu metot para transferi ile ilgili işlemleri gerçekleştirir.
 		/// </summary>
 		static void ParaTransfer()
 		{
 			while (true)
 			{
-				Console.WriteLine("1 - Başka Hesaba EFT ");
-				Console.WriteLine("2 - Başka Hesaba Havale");
-				Console.WriteLine("9 - ANA MENÜ");
-				Console.WriteLine("0 - ÇIKIŞ");
-				Console.WriteLine("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
+				EkranaYaz("1 - Başka Hesaba EFT ");
+				EkranaYaz("2 - Başka Hesaba Havale");
+				EkranaYaz("9 - ANA MENÜ");
+				EkranaYaz("0 - ÇIKIŞ");
+				EkranaYaz("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
 
-				string secim5 = Console.ReadLine();
+				string secim5 = Oku();
 				if (secim5 == "1")
 				{
-					Console.WriteLine("---- 1 - EFT ----");
+					EkranaYaz("---- 1 - EFT ----");
 					Console.Write("IBAN NO giriniz (TR ile başlayan 12 haneli numara):");
-					string ibanNo = Console.ReadLine();
+					string ibanNo = Oku();
 
 					if (ibanNo.StartsWith("TR") && ibanNo.Length == 12)
 					{
 						Console.Write("Gönderilecek para tutarını giriniz:");
-						double gonderilecekParaTutari = Convert.ToDouble(Console.ReadLine());
+						double gonderilecekParaTutari = DoubleYap();
 
 						if (bakiye >= gonderilecekParaTutari)
 						{
 							bakiye = bakiye - gonderilecekParaTutari;
-							Console.WriteLine("EFT ile para transferi gerçekleştirildi. Güncel bakiyeniz:" + bakiye);
-							Console.WriteLine();
+							EkranaYaz("EFT ile para transferi gerçekleştirildi. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
 							AltMenu();
 							break;
 						}
 						else
 						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							Console.WriteLine();
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
 							AltMenu();
 							break;
 
@@ -438,128 +316,321 @@ namespace _260213_3_Bankamatik_Proje
 					}
 					else
 					{
-						Console.WriteLine("Geçersiz IBAN NO.");
-						Console.WriteLine();
+						EkranaYaz("Geçersiz IBAN NO.");
+						Bosluk();
 						AltMenu();
 						break;
 					}
 				}
 				else if (secim5 == "2")
 				{
-					Console.WriteLine("---- 2 - Havale ----");
+					EkranaYaz("---- 2 - Havale ----");
 					Console.Write("Hesap numarasını giriniz (11 haneli):");
-					string hesapNo = Console.ReadLine();
+					string hesapNo = Oku();
 
 					if (hesapNo.Length == 11)
 					{
 						Console.Write("Gönderilecek para tutarını giriniz:");
-						double gonderilecekParaTutari1 = Convert.ToDouble(Console.ReadLine());
+						double gonderilecekParaTutari1 = DoubleYap();
 
 						if (bakiye >= gonderilecekParaTutari1)
 						{
 							bakiye = bakiye - gonderilecekParaTutari1;
-							Console.WriteLine("Havale ile para transferi gerçekleştirildi. Güncel bakiyeniz:" + bakiye);
-							Console.WriteLine();
+							EkranaYaz("Havale ile para transferi gerçekleştirildi. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
 							AltMenu();
 							break;
 						}
 						else
 						{
-							Console.WriteLine("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
-							Console.WriteLine();
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
 							AltMenu();
 							break;
 						}
 					}
 					else
 					{
-						Console.WriteLine("Geçersiz hesap numarası.");
-						Console.WriteLine();
+						EkranaYaz("Geçersiz hesap numarası.");
+						Bosluk();
 						AltMenu();
 						break;
 					}
 				}
 				else if (secim5 == "9")
 				{
-					Console.WriteLine("------------------------------------");
-					Console.WriteLine("ANA MENÜ");
+					Cizgi();
+					EkranaYaz("ANA MENÜ");
 					break;
 				}
 				else if (secim5 == "0")
 				{
-					Console.WriteLine("Çıkış yapılıyor...");
+					EkranaYaz("Çıkış yapılıyor...");
 					Environment.Exit(0);
 				}
 			}
 		}
 
-
-
-
-		static void AltMenu()
+		/// <summary>
+		/// Bu metot ödemeler ile ilgili işlemleri gerçekleştirir.
+		/// </summary>
+		static void Odemeler()
 		{
-			Console.WriteLine("9 - ANA MENÜ");
-			Console.WriteLine("0 - ÇIKIŞ");
-			Console.WriteLine("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
-			string secim4 = Console.ReadLine();
-			
-				if (secim4 == "9")
-				{
-					Console.WriteLine("------------------------------------");
+			while (true)
+			{
+				EkranaYaz("1 - Elektrik Faturası");
+				EkranaYaz("2 - Telefon Faturası");
+				EkranaYaz("3 - İnternet Faturası");
+				EkranaYaz("4 - Su Faturası");
+				EkranaYaz("5 - OGS Ödemeleri");
 
-					Console.WriteLine("ANA MENÜ");
-				
-				}
-				else if (secim4 == "0")
+				EkranaYaz("9 - ANA MENÜ");
+				EkranaYaz("0 - ÇIKIŞ");
+				EkranaYaz("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
+
+
+				string secim = Oku();
+				switch (secim)
 				{
-					Console.WriteLine("Çıkış yapılıyor...");
-					Environment.Exit(0);
+					case "1":
+
+						EkranaYaz("Elektrik faturası tutarını giriniz:");
+						double elektrikFaturasi = DoubleYap();
+
+						if (bakiye >= elektrikFaturasi)
+						{
+							bakiye = bakiye - elektrikFaturasi;
+							EkranaYaz("Elektrik faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
+							AltMenu();
+							break;
+						}
+						else
+						{
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
+							AltMenu();
+							break;
+						}
+
+					case "2":
+
+						EkranaYaz("Telefon faturası tutarını giriniz:");
+						double telefonFaturasi = DoubleYap();
+
+						if (bakiye >= telefonFaturasi)
+						{
+							bakiye = bakiye - telefonFaturasi;
+							EkranaYaz("Telefon faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
+							AltMenu();
+							break;
+						}
+						else
+						{
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
+							AltMenu();
+							break;
+						}
+
+					case "3":
+
+						EkranaYaz("İnternet faturası tutarını giriniz:");
+						double internetFaturasi = DoubleYap();
+
+						if (bakiye >= internetFaturasi)
+						{
+							bakiye = bakiye - internetFaturasi;
+							EkranaYaz("İnternet faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
+							AltMenu();
+							break;
+						}
+						else
+						{
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
+							AltMenu();
+							break;
+						}
+
+					case "4":
+
+						EkranaYaz("Su faturası tutarını giriniz:");
+						double suFaturasi = DoubleYap();
+
+						if (bakiye >= suFaturasi)
+						{
+							bakiye = bakiye - suFaturasi;
+							EkranaYaz("Su faturası için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
+							AltMenu();
+							break;
+						}
+						else
+						{
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
+							AltMenu();
+							break;
+						}
+
+					case "5":
+
+						EkranaYaz("OGS için ödeme tutarını giriniz:");
+						double ogsOdeme = DoubleYap();
+
+						if (bakiye >= ogsOdeme)
+						{
+							bakiye = bakiye - ogsOdeme;
+							EkranaYaz("OGS için ödeme yapıldı. Güncel bakiyeniz:" + bakiye);
+							Bosluk();
+							AltMenu();
+							break;
+						}
+						else
+						{
+							EkranaYaz("Bakiye yetersiz. İşlem gerçekleştirilemiyor!");
+							Bosluk();
+							AltMenu();
+							break;
+						}
+
+					case "9":
+
+						Cizgi();
+						EkranaYaz("ANA MENÜ");
+						break;
+
+					case "0":
+
+						EkranaYaz("Çıkış yapılıyor.");
+						Environment.Exit(0);
+						break;
+
+					default:
+						EkranaYaz("Hatalı seçim yaptınız.");
+						break;
 				}
+				break;
+			}
 		}
-
+	
+		/// <summary>
+		/// Bu metot şifre kontrolünü ve bilgilerin güncellenmesini sağlar.
+		/// </summary>
 		static void BilgiGuncelle()
 		{
 			while (true)
 			{
-				Console.WriteLine("1 - Şifre Değiştir");
-				Console.WriteLine("9 - ANA MENÜ");
-				Console.WriteLine("0 - ÇIKIŞ");
-				Console.WriteLine("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
+				EkranaYaz("1 - Şifre Değiştir");
+				EkranaYaz("9 - ANA MENÜ");
+				EkranaYaz("0 - ÇIKIŞ");
+				EkranaYaz("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
 
-				string secim12 = Console.ReadLine();
+				string secim = Oku();
 
-				if (secim12 == "1")
+				if (secim == "1")
 				{
-					Console.WriteLine("Mevcut şifrenizi giriniz: ");
-					string mevcutSifre = Console.ReadLine();
+					EkranaYaz("Mevcut şifrenizi giriniz: ");
+					string mevcutSifre = Oku();
 
 					if (mevcutSifre == sifre)
 					{
-						Console.WriteLine("Yeni şifre: ");
-						sifre = Console.ReadLine();
-						Console.WriteLine("Şifre güncellendi.");
+						EkranaYaz("Yeni şifre: ");
+						sifre = Oku();
+						EkranaYaz("Şifre güncellendi.");
+						Bosluk();
 						AltMenu();
 						break;
 					}
 					else
 					{
-						Console.WriteLine("Şifre yanlış!");
+						EkranaYaz("Şifre yanlış!");
+						Bosluk();
 						AltMenu();
 						break;
 					}
 				}
-				else if (secim12 == "9")
+				else if (secim == "9")
 				{
-					Console.WriteLine("------------------------------------");
-					Console.WriteLine("ANA MENÜ");
+					Cizgi();
+					EkranaYaz("ANA MENÜ");
 					break;
 				}
-				else if (secim12 == "0")
+				else if (secim == "0")
 				{
-					Console.WriteLine("Çıkış yapılıyor...");
+					EkranaYaz("Çıkış yapılıyor...");
 					Environment.Exit(0);
 				}
 			}
+		}
+
+		/// <summary>
+		/// Bu metot alt menü işlemlerini gerçekleştirir.
+		/// </summary>
+		static void AltMenu()
+		{
+			EkranaYaz("9 - ANA MENÜ");
+			EkranaYaz("0 - ÇIKIŞ");
+			EkranaYaz("Lütfen yapmak istediğiniz işlemi tuşlayınız:");
+			string secim = Oku();
+
+			if (secim == "9")
+			{
+				Cizgi();
+				EkranaYaz("ANA MENÜ");
+
+			}
+			else if (secim == "0")
+			{
+				EkranaYaz("Çıkış yapılıyor...");
+				Environment.Exit(0);
+			}
+		}
+
+		/// <summary>
+		/// Bu metot ekrana metin yazdırır.
+		/// </summary>
+		/// <param name="metin"></param>
+		static void EkranaYaz(string metin)
+		{
+			Console.WriteLine(metin);
+		}
+
+		/// <summary>
+		/// Bu metot ekrana çizgi yazdırır.
+		/// </summary>
+		static void Cizgi()
+		{
+			Console.WriteLine("------------------------------------");
+		}
+
+		/// <summary>
+		/// Bu metod kodun ekrana okunmasını sağlar.
+		/// </summary>
+		/// <returns></returns>
+		static string Oku()
+		{
+			return Console.ReadLine();
+		}
+
+		/// <summary>
+		/// Bu metot girilen değeri double veri tipine dönüştürür.
+		/// </summary>
+		/// <returns></returns>
+		static double DoubleYap()
+		{
+			return Convert.ToDouble(Console.ReadLine());
+		}
+
+		/// <summary>
+		/// Bu metot ekranda boşluk atmayı sağlar.
+		/// </summary>
+		static void Bosluk()
+		{
+			Console.WriteLine();
 		}
 	}
 }
