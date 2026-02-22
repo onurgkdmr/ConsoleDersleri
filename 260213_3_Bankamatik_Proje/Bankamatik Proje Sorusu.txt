@@ -1,0 +1,129 @@
+﻿﻿ATM UYGULAMASI
+
+Başlangıç Bakiyesi: 250 TL
+
+---------------------------------
+1 - Kartlı İşlem
+2 - Kartsız İşlem
+---------------------------------
+
+KARTLI İŞLEM
+
+Şifre: ab18
+Kullanıcının 3 giriş hakkı vardır.
+3 kez yanlış girilirse sistemden çıkış yapılır.
+Şifre doğru girilirse Ana Menü açılır.
+
+---------------------------------
+ANA MENÜ
+
+1 - Para Çekme
+2 - Para Yatırma
+3 - Para Transferleri
+4 - Eğitim Ödemeleri
+5 - Ödemeler
+6 - Bilgi Güncelleme
+0 - Çıkış
+
+---------------------------------
+1 - PARA ÇEKME
+
+Çekilecek tutar istenir.
+Bakiye yeterli ise para çekilir.
+Yetersiz bakiye ise uyarı verilir.
+
+9 - Ana Menü
+0 - Çıkış
+
+---------------------------------
+2 - PARA YATIRMA
+
+1 - Kredi Kartına
+2 - Kendi Hesabına
+9 - Ana Menü
+0 - Çıkış
+
+---- 1 - Kredi Kartına ----
+En az 12 haneli kart numarası girilir.
+Yatırılacak tutar istenir.
+Bakiye yeterli ise işlem gerçekleştirilir.
+
+9 - Ana Menü
+0 - Çıkış
+
+---- 2 - Kendi Hesabına ----
+Yatırılacak tutar istenir.
+Hesap bakiyesi artırılır.
+
+9 - Ana Menü
+0 - Çıkış
+
+---------------------------------
+3 - PARA TRANSFERLERİ
+
+1 - Başka Hesaba EFT
+2 - Başka Hesaba Havale
+9 - Ana Menü
+0 - Çıkış
+
+---- 1 - EFT ----
+IBAN girilir.
+IBAN "TR" ile başlamalı ve devamında 12 haneli sayı olmalıdır.
+Gönderilecek tutar istenir.
+Bakiye yeterli ise transfer yapılır.
+
+9 - Ana Menü
+0 - Çıkış
+
+---- 2 - Havale ----
+11 haneli hesap numarası girilir.
+Gönderilecek tutar istenir.
+Bakiye yeterli ise transfer yapılır.
+
+9 - Ana Menü
+0 - Çıkış
+
+---------------------------------
+4 - EĞİTİM ÖDEMELERİ
+
+Bu sayfa arızalıdır.
+
+9 - Ana Menü
+0 - Çıkış
+
+---------------------------------
+5 - ÖDEMELER
+
+1 - Elektrik Faturası
+2 - Telefon Faturası
+3 - İnternet Faturası
+4 - Su Faturası
+5 - OGS Ödemeleri
+9 - Ana Menü
+0 - Çıkış
+
+Seçilen fatura için tutar istenir.
+Bakiye yeterli ise ödeme yapılır.
+Yetersiz ise uyarı verilir.
+
+---------------------------------
+6 - BİLGİ GÜNCELLEME
+
+1 - Şifre Değiştir
+9 - Ana Menü
+0 - Çıkış
+
+Mevcut şifre doğrulanır.
+Yeni şifre belirlenir ve güncellenir.
+
+---------------------------------
+
+GENEL KURALLAR
+
+- Başlangıç bakiyesi 250 TL'dir.
+- Tüm para işlemlerinde bakiye kontrolü yapılmalıdır.
+- Bütün işlemler method olarak kodlanacaktır
+- Her işlem sonrası kullanıcıya:
+  9 - Ana Menü
+  0 - Çıkış
+  seçenekleri sunulmalıdır.
