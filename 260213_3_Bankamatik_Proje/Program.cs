@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Reflection.Metadata;
+using System.Security.Cryptography;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace _260213_3_Bankamatik_Proje
@@ -18,8 +19,9 @@ namespace _260213_3_Bankamatik_Proje
 			BaslangicMenu();
 			Bosluk();
 			KartliIslem();
-			AnaMenu();
+
 		}
+
 
 		/// <summary>
 		/// Bu metot kartlı veya kartsız işlem için seçim yaptırır.
@@ -43,7 +45,7 @@ namespace _260213_3_Bankamatik_Proje
 					EkranaYaz("KARTSIZ İŞLEM");
 					EkranaYaz("Kartsız herhangi bir işlem yapılamamaktadır.");
 					return;
-					
+
 				}
 				else
 				{
@@ -51,7 +53,7 @@ namespace _260213_3_Bankamatik_Proje
 				}
 
 			} while (secim != "1" && secim != "2");
-			
+
 		}
 
 		/// <summary>
@@ -71,6 +73,7 @@ namespace _260213_3_Bankamatik_Proje
 					EkranaYaz("Giriş başarılı. Ana menüye yönlendiriliyorsunuz.");
 					Cizgi();
 					EkranaYaz("ANA MENÜ");
+					AnaMenu();
 					Bosluk();
 					break;
 				}
@@ -84,6 +87,7 @@ namespace _260213_3_Bankamatik_Proje
 						EkranaYaz("Şifre 3 kez yanlış girildi. Sistemden çıkılıyor.");
 					}
 				}
+
 			}
 		}
 
@@ -516,7 +520,7 @@ namespace _260213_3_Bankamatik_Proje
 				break;
 			}
 		}
-	
+
 		/// <summary>
 		/// Bu metot şifre kontrolünü ve bilgilerin güncellenmesini sağlar.
 		/// </summary>
