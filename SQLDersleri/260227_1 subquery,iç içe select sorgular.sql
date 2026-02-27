@@ -86,4 +86,3 @@ order by [Sipariş Sayısı]
 -- 2) Her bir siparişte kaç ürün olduğunu getiren scripti kodlayınız.
 -- 3) Her bir müşterinin aldığı ürün sayısı Firma adı, Firma yetkili ad-soyad, şehir ve ülke şeklinde hesaplayınız.
 
--- ONUR
