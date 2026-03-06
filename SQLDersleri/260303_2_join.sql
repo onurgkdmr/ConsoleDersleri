@@ -19,7 +19,7 @@ inner join Categories    as c on p.CategoryID=c.CategoryID
 
 Join Çeşitleri:
 - inner join => 2 tablodan ortak data'lar
-- right join => 2 tablodan join yapıısının sağında kalan tablodan bütün dataları, diğer tablodan da ortak dataları getirir.
+- right join => 2 tablodan join yapısının sağında kalan tablodan bütün dataları, diğer tablodan da ortak dataları getirir.
 - left join => 2 tablodan join yapısının solunda kalan tablodan bütün dataları, diğer tablodan da ortak dataları getirir.
 - full outer jon => 2 tablonun bütün kolonlarını getirir.
 
@@ -103,7 +103,7 @@ inner join Products as p on p.CategoryID=c.CategoryID
 inner join [Order Details] as od on od.ProductID=p.ProductID
 group by c.CategoryName
 ----------------------------------------------------------------------------------------
--- En çok satılan ürünü bilgisini,hangi müşterilerin sipariş ettiğini hesaplayınız?
+-- En çok satılan ürünün bilgisini ve hangi müşterilerin sipariş ettiğini hesaplayınız?
 select *from Products
 select *from Customers
 select *from Orders
