@@ -125,4 +125,3 @@ Koşul 2 => Tekrarlı data eklemesi engellenecek (Insert-Update için ayrı ayr�
 */
 
 
--- ONUR
