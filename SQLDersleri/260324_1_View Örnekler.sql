@@ -43,7 +43,7 @@ alter view vw_Categori_Order_Details
 as
 select 
 c.CategoryID,
-c.CategoryName,
+c.CategoryName as 'Kategori Adý',
 SUM(od.Quantity) as 'Satýlan Ürün Miktarý'
 from Categories as c
 inner join Products as p on p.CategoryID=c.CategoryID
