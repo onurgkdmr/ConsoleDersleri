@@ -3,7 +3,7 @@
 -- **********************************************
 -- Stored Procedure DEVAMI
 
-use Nortwinddb
+use NorthwindDB
 
 -- Ürün araması yapan sp_Urun_Satis_Sonuc_Ara adında bir sp için arama sonuçlarını fiyat,stok bilgilerini veren yapıyı kodlayınız.
 
@@ -78,4 +78,3 @@ go
 
 exec sp_Musteri_Satis_Rapor '1998.01.02'
 
--- ONUR
