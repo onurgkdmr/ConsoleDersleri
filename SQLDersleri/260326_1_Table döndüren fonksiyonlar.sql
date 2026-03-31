@@ -3,6 +3,8 @@
 -- *****************************************
 -- Function, Tablo döndüren fonksiyonlar
 
+use HastahaneDB
+
 go
 create function fnc_Carp(@sayi1 int,@sayi2 int)
 returns int
@@ -97,7 +99,3 @@ select *from Hastalar
 select *from fnc_HastaRandevularý('Ahmet','Kara')
 
 select *from dbo.fnc_HastaRandevularý('a','') 
-
-
-
--- Onur

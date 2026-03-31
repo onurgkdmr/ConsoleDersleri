@@ -1,19 +1,19 @@
 -- ****************************************
 -- 26 Mart 2026 SQL Dersleri
 -- ****************************************
--- Stored Procedure
--- Kısaca SP olarak isimlendirilir. SP'ler performans konusunda çok iyi oldukları için çok kullanılan bir nesnedir.
--- Saklı yordamlar olarak bilinir.
+-- Stored Procedure => SaklÄ± yordam
+-- KÄ±saca SP olarak isimlendirilir. SP'ler performans konusunda Ã§ok iyi olduklarÄ± iÃ§in Ã§ok kullanÄ±lan bir nesnedir.
+-- SaklÄ± yordamlar olarak bilinir.
 /*
-SP lerin özellikleri:
-1-Performansları çok başarıldır. 
-2-CRUD işlemleri SP ler ile yapılır
-3-Parametre alır, döngü, karar yapıları , case when then yapıları kullanılabilir
+SP lerin Ã¶zellikleri:
+1-PerformanslarÄ± Ã§ok baÅŸarÄ±lÄ±dÄ±r. 
+2-CRUD iÅŸlemleri SP ler ile yapÄ±lÄ±r.
+3-Parametre alÄ±r, dÃ¶ngÃ¼, karar yapÄ±larÄ±, case when then yapÄ±larÄ± kullanÄ±labilir.
 */
 
 use NorthwindDB
 
--- SP Oluşturulması:
+-- SP OluÅŸturulmasÄ±:
 
 go
 create procedure sp_Kategori_Urunler
@@ -26,7 +26,7 @@ join Products as p on p.CategoryID=c.CategoryID
 end
 go
 
--- SP Çağrılması:
+-- SP Ã‡aÄŸÄ±rÄ±lmasÄ±:
 
 execute sp_Kategori_Urunler
 exec sp_Kategori_Urunler
@@ -50,4 +50,3 @@ exec sp_Kategori_Urun_Ara 'ch'
 
 
 
--- ONUR

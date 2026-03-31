@@ -5,6 +5,7 @@
 -- Tablolar, kolonlar üzerinde iþlem yapmak için kullanýlýr.
 -- Deðer verir (döndürür), parametre alýr.
 -- *********************************************
+use NorthwindDB
 
 -- Kolon iþlemleri için kullanýlan Functions (fonksiyonlar)
 
@@ -17,7 +18,7 @@ as --Kod gövdesinin baþladýðýný gösterir.
 begin --Baþla-{
 	declare @sonuc int --Declare => Deðiþken tanýmlayýnca kullanýlýr.
 	--@sonuc => deðiþken, int veri tipi
-	set @sonuc = @sayi1+@sayi2 --SQL'de bir deðiþken deðer atarken, iþlem yaparken set anahtar kelimesi kullanýlýr.
+	set @sonuc = @sayi1+@sayi2 --SQL'de bir deðiþkene deðer atarken/iþlem yaparken set anahtar kelimesi kullanýlýr.
 	return @sonuc
 	--return @sayi1+@sayi2 => Kýsa olarak bu þekilde tanýmlanabilir.
 end --Bitir-}
@@ -62,6 +63,8 @@ from [Order Details]
 select UnitPrice, UnitsInStock from Products where ProductID=11
 select ProductName from Products where ProductID=11
 
+select * from Products
+
 go
 create function fnc_ProductName
 (
@@ -84,7 +87,7 @@ from [Order Details]
 -----------------------------------------------------------
 -- Her bir sipariþ için Order Details tablosunda ürün satýþ bilgilerini (OrderId,ProductId,ProductName,Quantity) getiren ve Sipariþ Tarihini (Order Date) getiren yapýyý fnc_GetOrderDate adýnda function içinde kodlayýnýz.
 
--- OrderDate içn function yapýlacak aþaðýda.
+-- OrderDate için function yapýlacak aþaðýda.
 
 select *from Orders
 

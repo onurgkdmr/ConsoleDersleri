@@ -5,7 +5,7 @@
 --2) Her bir müşterinin kaç ürün aldığını hesaplayan vw_MusteriUrunSayisi adında view yapınız.
 --3) Her bir personelin getirdiği getiri toplamını hesaplayan vw_PersonelGetirileri adında view kodlayınız.
 
-use Nortwinddb
+use NorthwindDB
 
 -- Nortwind için:
 

@@ -132,7 +132,7 @@ go
 -- view ile bize lazım olacak hasta, randevu bilgilerini getirmek için diğer tablolar join ile birleştirilir.
 
 select
-d.Adi,d.Soyadi,h.Adi,h.Soyadi,r.tarih,r.Saat
+d.Adi as 'Doktor Adı',d.Soyadi as 'Doktor Soyadı',h.Adi as 'Hasta Adı',h.Soyadi as 'Hasta Soyadı',r.tarih as 'Randevu Tarihi',r.Saat as 'Randevu Saati'
 from vw_Doktor_Randevu_SubQuery as vw
 inner join Doktorlar as d on d.Id=vw.DoktorId
 inner join Randevular as r on r.DoktorId=d.Id
