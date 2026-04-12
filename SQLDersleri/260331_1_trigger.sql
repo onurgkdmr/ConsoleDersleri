@@ -5,7 +5,8 @@
 
 /*
 
- Bir tabloya data eklerken, güncellerken ya da silerken o tabloda SQL tarafýnda baþka
+ Bir tabloya data eklerken, güncellerken ya da silerken o tabloda SQL tarafýnda baþka iþlemlerin de gerçekleþmesini saðlayan yapýlardýr.
+ Her tablo altýnda trigger klasörü bulunmaktadýr. Trigger'lar tabloya özgü olduðundan tablo altýnda kayýt edilir.
 
 */
 
@@ -16,13 +17,13 @@ select *from Products
 go
 create trigger trg_DogumGunu
 /*
-on [table name] -- tablo adý
-[before | after] -- gerçekleþmesini istediðiniz iþlem öncesi/sonrasý
-{insert | update | delete} -- iþlem adý. Tabloda hangi iþlem olurken çalýþmasýný isteniyorsa o yazýlýr.
+on [table name] --> tablo adý
+[before | after] --> gerçekleþmesini istediðiniz iþlem öncesi/sonrasý
+{insert | update | delete} --> iþlem adý. Tabloda hangi iþlem olurken çalýþmasýný isteniyorsa o yazýlýr.
 */
-on Employees -- trigger'ýn çalýþacaðý tablo
-after insert -- trigger'ýn insert iþleminden sonra çalýþacaðýný gösterir.
-as -- kod bloðu baþlangýcý
+on Employees --> trigger'ýn çalýþacaðý tablo
+after insert --> trigger'ýn insert iþleminden sonra çalýþacaðýný gösterir.
+as --> kod bloðu baþlangýcý
 begin
 --*************************************************************************
 declare @dogumGunu datetime
@@ -83,20 +84,30 @@ else
 end
 go
 
+--********************************************************************************
 insert into [Order Details] (OrderID,ProductID,UnitPrice,Quantity,Discount) 
 values (10332,6,19,21,0)
 
 select *from [Order Details] where OrderID=10332
-select *from Products where ProductID in (18,42,47,2,3,6,10,13) --120
+select *from Products where ProductID in (18,42,47,2,3,6,10,13) --> ProductID=6 olan ürün için UnitsInStock=120 idi, trigger dan sonra 99 a düþtü.
+--********************************************************************************
+insert into [Order Details] (OrderID,ProductID,UnitPrice,Quantity,Discount)
+values (10332,10,19,1,0.10)
+
+select *from [Order Details] where OrderID=10332
+select *from Products where ProductID=10 --> ProductID=10 olan ürün için UnitsInStock=31 idi, trigger dan sonra 30 a düþtü.
+--********************************************************************************
 
 insert into [Order Details] (OrderID,ProductID,UnitPrice,Quantity,Discount)
-values (10332,10,19,1,0,10)
-
-insert into [Order Details] (OrderID,ProductID,UnitPrice,Quantity,Discount)
-values (10332,13,19,30,0,10) -- trigger before özelliði ile verilmesi gerekir. O zaman stok istenilen þekilde ayarlanabilir ve fazla stok verilmez.
+values (10332,13,19,30,0,10) --> trigger before özelliði ile verilmesi gerekir. O zaman stok istenilen þekilde ayarlanabilir ve fazla stok verilmez. 
+--Bu haliyle Quantity=30 isteniyor ama UnitsInStock=24 olduðu için stoðu yeterli olmuyor. Ancak trigger after özelliði kullanýldýðý için trigger'ý eklemese bile tabloya insert ediyor. Bu hatanýn düzeltilmesi için de trigger before özelliði kullanýlmalý.
+--********************************************************************************
 
 -- [Order Details] tablosuna Insert yapýlýrken discount verildiðinde verilen fiyat üzerinde discount kadar indirim yapýlarak yeni fiyat UnitPrice kolonunda gösteriniz.
 -- trg_IndirimUygula
+
+
+go
 
 select *from [Order Details]
 
